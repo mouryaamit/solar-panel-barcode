@@ -3,7 +3,7 @@
   "description": "solar-panel-barcode",
   "version": "1.0.0",
   "scripts": {
-    "start": "appServer.js"
+    "start": "node appServer.js"
   },
   "dependencies": {
     "aes-cross": "^1.0.9",
