@@ -18,7 +18,7 @@
         var response = responseMethod(this.response , this.callback , this.tnxId);
         var resHandle = response.requestHandle.bind(this);
         var user = barcodeMethod(this.response.config , this.tnxId);
-        user.genrateBarcode(this.response.request.body,resHandle);
+        user.genrateBarcode(this.response.request.body ,this.response.request.params, this.response.request.query, resHandle);
     };
 
     module.exports.api = function(rin , callback){
