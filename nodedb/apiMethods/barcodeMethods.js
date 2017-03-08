@@ -34,7 +34,8 @@
         genrateBarcode:function (reqBody,reqParam,reqQuery,callback) {
             console.log(reqBody)
             console.log(reqParam)
-            console.log(reqQuery)
+            console.log(reqQuery.bcid)
+            console.log(reqQuery.text)
             bwipjs.toBuffer({
                 // bcid:        'code128',       // Barcode type
                 // bcid:        'qrcode',       // Barcode type
