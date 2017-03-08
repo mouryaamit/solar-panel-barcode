@@ -2,6 +2,9 @@
   "name": "MFA",
   "description": "MFA",
   "version": "1.0.0",
+  "scripts": {
+    "start": "appServer.js"
+  },
   "dependencies": {
     "aes-cross": "^1.0.9",
     "barcode": "^0.1.0",
