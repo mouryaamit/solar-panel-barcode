@@ -15,7 +15,7 @@
             config.serviceTo = this.fileName;
             config.mongoDb = {
                 dbName              : 'iris',
-                dbPath              : 'mongodb://192.168.2.220:27017/iris-mfa/'
+                dbPath              : 'mongodb://amitmourya:2db4c98180c3ff2202cee15a68edf278@ds123410.mlab.com:23410/solar-panel-barcode/'
             };
             config.enrollStatusMsg = {
                 approved                    : 'Approved',
