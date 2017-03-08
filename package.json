@@ -1,6 +1,6 @@
 {
-  "name": "MFA",
-  "description": "MFA",
+  "name": "solar-panel-barcode",
+  "description": "solar-panel-barcode",
   "version": "1.0.0",
   "scripts": {
     "start": "appServer.js"
