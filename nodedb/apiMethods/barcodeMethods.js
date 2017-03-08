@@ -37,9 +37,9 @@
             console.log(reqQuery)
             bwipjs.toBuffer({
                 // bcid:        'code128',       // Barcode type
-                bcid:        'qrcode',       // Barcode type
-                // bcid:        reqQuery.bcid,       // Barcode type
-                text:        "reqQuery.text",    // Text to encode
+                // bcid:        'qrcode',       // Barcode type
+                bcid:        reqQuery.bcid,       // Barcode type
+                text:        reqQuery.text,    // Text to encode
                 scale:       3,               // 3x scaling factor
                 // height:      10,              // Bar height, in millimeters
                 includetext: true,            // Show human-readable text
