@@ -1,7 +1,7 @@
 {
   "name": "solar-panel-barcode",
   "scripts": {
-    "postdeploy": "app-server/appServer.js"
+    "postdeploy": "appServer.js"
   },
   "env": {
   },
