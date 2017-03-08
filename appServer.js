@@ -6,7 +6,7 @@
 
     var loadMultipleDatabases = require('./nodedb/databases/databaseManager');
 
-    var port = 3814;
+    var port = 80;
 	
 	if(!port){
 		console.log("Please specify the Port for application")
