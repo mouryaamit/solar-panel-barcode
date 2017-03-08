@@ -1,0 +1,16 @@
+{
+  "name": "solar-panel-barcode",
+  "scripts": {
+    "postdeploy": "app-server/appServer.js"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
