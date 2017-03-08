@@ -32,6 +32,9 @@
 
     BarcodeMethod.prototype = {
         genrateBarcode:function (reqBody,reqParam,reqQuery,callback) {
+            console.log(reqBody)
+            console.log(reqParam)
+            console.log(reqQuery)
             bwipjs.toBuffer({
                 // bcid:        'code128',       // Barcode type
                 // bcid:        'qrcode',       // Barcode type
