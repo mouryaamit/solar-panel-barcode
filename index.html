@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+Bar Code Type
+<select id="bcid">
+    <option value="" selected>Select</option>
+    <option value="code128">Bar Code</option>
+    <option value="qrcode">QR</option>
+</select>
+<br/>
+<select id="type">
+    <option value="" selected>Select</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select>
+<br/>
+<button onclick="gen()">
+    Generate
+</button>
+
+<img style="display: none" src="" id="barcode"/>
+<script>
+    var gen= function () {
+        var dated=new Date();
+        dated = ""+dated.getFullYear()+dated.getMonth()+dated.getDate();
+        dated = $("#type").val()+dated+1
+        $.ajax({url: "/genrateBarcode?bcid="+$("#bcid").val()+"&text=adsfsrtfcygvhbjknmjkhbgyftd", success: function(result){
+            $("#barcode").src(result.responseData);
+        }});
+    }
+</script>
+</body>
+</html>
