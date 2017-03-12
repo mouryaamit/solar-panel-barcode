@@ -17,9 +17,7 @@
 
     function middleware (app){
         app.use(cors());
-        app.use(route.get('/', function() {
-            this.body = { msg: 'Hello World!' };
-        }));
+
         app.use(function *(next){
             var start = new Date;
             yield next;
