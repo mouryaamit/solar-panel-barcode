@@ -7,7 +7,8 @@
     var session = require('koa-generic-session');
     var serve = require('koa-static');
     var randomID = require("random-id");
-   
+    var cors = require('koa-cors');
+
     var schemeValidator = require('../../router/routeValidator');
     var config = require('./serverConfig');
     var serverErrors = require('./serverErrors')();
@@ -15,7 +16,10 @@
     module.exports = middleware;
 
     function middleware (app){
-
+        app.use(cors());
+        app.use(route.get('/', function() {
+            this.body = { msg: 'Hello World!' };
+        }));
         app.use(function *(next){
             var start = new Date;
             yield next;
