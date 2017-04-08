@@ -29,10 +29,12 @@ Bar Code Type
 <script>
     var gen= function () {
         var dated=new Date();
-        dated = ""+dated.getFullYear()+dated.getMonth()+dated.getDate();
-        dated = $("#type").val()+dated+1
-        $.ajax({url: "/genrateBarcode?bcid="+$("#bcid").val()+"&text=adsfsrtfcygvhbjknmjkhbgyftd", success: function(result){
-            $("#barcode").src(result.responseData);
+        dated = ""+dated.getFullYear()+"0"+dated.getMonth()+dated.getDate();
+        dated = $("#type").val()+dated+"-"+1;
+        dated = "2017CN0003275 MP250"
+        $.ajax({url: "https://nameless-island-31793.herokuapp.com/genrateBarcode?bcid="+$("#bcid").val()+"&text="+dated, success: function(result){
+            $("#barcode").attr("src",result.responseData);
+            $("#barcode").css({ 'display': "block" })
         }});
     }
 </script>

@@ -10,8 +10,3 @@ MongoDB can be downloaded from
     https://www.mongodb.com/dr/fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.2.6-signed.msi/download
 
 Installation
-1. Copy MFA.zip and extract it.
-2. Modify dbPath in "<Project Location>\nodedb\lib\prop\serverConfig.js"
-3. Configure "<Project Location>\nodedb\lib\config\iris.js"
-4. run mfa server with following command
-    > node --harmony appServer.js <PORT>
