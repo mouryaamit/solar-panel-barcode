@@ -1387,15 +1387,13 @@
 
         <!--################################## Transfer Instruction Schema ##############################################-->
         <!--#########################################################################################################-->
-        var HolidayCalender = new Schema({
-            institutionId: {type: String, required: true},
-            date: {type: String, required: true},// MM/DD/YYYY
-            type: {type: String, required: true, enum: ['fundsTransfer', 'wireTransfer', 'achTransfer']}
+        var barcode = new Schema({
+            barcode: {type: String, required: true},
+            step: {type: String, required: true}
         });
 
-        HolidayCalender.index({institutionId: 1, date: 1, type: 1}, {unique: true});
-        HolidayCalender.plugin(timestamps);
-        module.exports.HolidayCalender = db.model('holidayCalender', HolidayCalender);
+        barcode.plugin(timestamps);
+        module.exports.barcode = db.model('barcode', barcode);
 
     };
 

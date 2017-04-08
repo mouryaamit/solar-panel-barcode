@@ -48,8 +48,7 @@
     var FundsTransferLogsAckModel = require('../models/dbModel').FundsTransferLogsAck;
     var FundsTransferStatusLogModel = require('../models/dbModel').FundsTransferStatusLog;
     var TransferInstructionModel = require('../models/dbModel').TransferInstruction;
-    var HolidayCalenderModel = require('../models/dbModel').HolidayCalender;
-    var CaptchaModel = require('../models/dbModel').Captcha;
+    var barcodeModel = require('../models/dbModel').barcode;
 
     exports.modelName = {
         BankAdmin                               : 'BankAdmin',
@@ -97,7 +96,7 @@
         FundsTransferLogsAck                        : 'FundsTransferLogsAck',
         FundsTransferStatusLog               : 'FundsTransferStatusLog',
         Captcha                                 : 'Captcha',
-        HolidayCalender                         : 'HolidayCalender',
+        barcode                         : 'barcode',
         TransferInstruction                     : 'TransferInstruction'
     };
 
@@ -105,10 +104,6 @@
         {
             model               : 'BankAdmin',
             modelObj            : BankAdminModel
-        },
-        {
-            model               : 'Captcha',
-            modelObj            : CaptchaModel
         },
         {
             model               : 'UserPageHit',
@@ -287,8 +282,8 @@
             modelObj            : TransferInstructionModel
         },
         {
-            model               : 'HolidayCalender',
-            modelObj            : HolidayCalenderModel
+            model               : 'barcode',
+            modelObj            : barcodeModel
         }
     ];
 
