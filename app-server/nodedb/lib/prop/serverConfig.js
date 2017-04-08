@@ -21,8 +21,8 @@
 
             config.serviceTo = this.fileName;
             config.mongoDb = {
-                dbName              : 'iris',
-                dbPath              : 'mongodb://192.168.2.153:27017/iris-bkp-28-05-2016/,mongodb://192.168.2.129:27017/iris-bkp-28-05-2016/'
+                dbName              : 'solar-panel-barcode',
+                dbPath              : 'mongodb://amitmourya:2db4c98180c3ff2202cee15a68edf278@ds123410.mlab.com:23410/solar-panel-barcode/'
             };
             config.enrollStatusMsg = {
                 approved                    : 'Approved',
