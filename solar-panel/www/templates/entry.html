@@ -1,0 +1,15 @@
+<ion-view title="Entry" id="page2">
+  <ion-content padding="true" class="has-header">
+    <button id="entry-button1" class="button button-positive  button-block" ng-click="scanBarcode()">Scan Barcode</button>
+    <form id="entry-form1" class="list">
+      <label class="item item-input item-stacked-label" id="entry-input1">
+        <span class="input-label">Barcode</span>
+        <input type="text" placeholder="Barcode" ng-model="data.barcode" disabled>
+      </label>
+    </form>
+    <div id="entry-button-bar2" class="button-bar">
+      <button id="entry-button13" class="button button-positive  button-block" ng-click="startEntry()">Start</button>
+      <button id="entry-button15" class="button button-positive  button-block" ng-click="completeEntry()">Complete</button>
+    </div>
+  </ion-content>
+</ion-view>
