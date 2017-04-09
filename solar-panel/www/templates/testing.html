@@ -1,31 +1,31 @@
 <ion-view title="Testing" id="page3">
   <ion-content padding="true" class="has-header">
-    <button id="testing-button17" class="button button-positive  button-block">Scan Barcode</button>
-    <form id="testing-form2" class="list">
+    <button id="testing-button17" class="button button-positive  button-block" ng-click="scanBarcode()">Scan Barcode</button>
+    <form id="testing1" name="testing1" class="list">
       <label class="item item-input item-stacked-label" id="testing-input2">
         <span class="input-label">Barcode</span>
-        <input type="text" placeholder="Barcode">
+        <input type="text" placeholder="Barcode" id="Barcode" name="Barcode" ng-model="data.barcode" required>
       </label>
     </form>
-    <button id="testing-button18" class="button button-positive  button-block">Read Data</button>
-    <form id="testing-form4" class="list">
+    <button id="testing-button18" class="button button-positive  button-block" ng-click="readData()" ng-disabled="testing1.$invalid ">Read Data</button>
+    <form id="testing2" name="testing2" class="list">
       <label class="item item-input" id="testing-input5">
         <span class="input-label">Voc</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="data2.Voc" required readonly>
       </label>
       <label class="item item-input" id="testing-input6">
         <span class="input-label">Isc</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="data2.Isc" required readonly>
       </label>
       <label class="item item-input" id="testing-input7">
         <span class="input-label">Pmax</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="data2.Pmax" required readonly>
       </label>
       <label class="item item-input" id="testing-input8">
         <span class="input-label">Vload</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="data2.Vload" required readonly>
       </label>
-      <button id="testing-button19" class="button button-positive  button-block">Save</button>
+      <!--<button id="testing-button19" class="button button-positive  button-block"  ng-click="saveData()" ng-disabled="testing2.$invalid ">Save</button>-->
     </form>
   </ion-content>
 </ion-view>

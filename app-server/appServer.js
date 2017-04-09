@@ -12,16 +12,16 @@
 
     var logLevel = process.argv[4] || "i";
 
-    if(logLevel.toLowerCase() == "a"){
-        console.info("*** Verbose Logger Running For ***")
-    } else if(logLevel.toLowerCase() == "d") {
-        console.log = function(){};
-        console.info("*** Debug Logger Running ***")
-    } else {
-        console.log = function(){};
-        console.warn = function(){};
-        console.info("*** Information Logger Running ***")
-    }
+    // if(logLevel.toLowerCase() == "a"){
+    //     console.info("*** Verbose Logger Running For ***")
+    // } else if(logLevel.toLowerCase() == "d") {
+    //     console.log = function(){};
+    //     console.info("*** Debug Logger Running ***")
+    // } else {
+    //     console.log = function(){};
+    //     console.warn = function(){};
+    //     console.info("*** Information Logger Running ***")
+    // }
 
     if(!port){
         console.error("Please specify the Port for application")

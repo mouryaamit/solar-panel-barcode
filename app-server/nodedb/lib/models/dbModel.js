@@ -1389,11 +1389,26 @@
         <!--#########################################################################################################-->
         var barcode = new Schema({
             barcode: {type: String, required: true},
-            step: {type: String, required: true}
+            step: {type: String, required: true},
+            oldEntries : [{
+                updatedOn : Date,
+                step: {type: String},
+            }]
         });
 
         barcode.plugin(timestamps);
         module.exports.barcode = db.model('barcode', barcode);
+
+        var testData = new Schema({
+            originalFileName: {type: String},
+            originalFilePath: {type: String},
+            originalFileBase64: {type: String},
+            barcode: {type: String, required: true},
+            data: {}
+        });
+
+        testData.plugin(timestamps);
+        module.exports.testData = db.model('testData', testData);
 
     };
 

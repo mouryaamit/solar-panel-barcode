@@ -6,7 +6,7 @@
             redisStore : {
                 host:"192.168.2.153",
                 port:3000,
-                isEnabled : true
+                isEnabled : false
             },
             checkDownTime : "99999" // Seconds
         };

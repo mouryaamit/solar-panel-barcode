@@ -14,20 +14,34 @@
     var globalConn = require('../lib/prop/globalConnObj');
     //OTP Require
     var entry = require('../api/solar/entryApi');
+    var testing = require('../api/solar/testingApi');
+    var status = require('../api/solar/getStatusApi');
 
 
 
     module.exports.apiCalls = {
 
-        entry              : 'entry'
+        status              : 'status',
+        entry              : 'entry',
+        testing              : 'testing'
     };
 
     function Route(app , rin) {
         var routes = [
             {
+                api                 : 'status',
+                isEncrypted         : false,
+                func                : status.api
+            },
+            {
                 api                 : 'entry',
                 isEncrypted         : false,
-                func                : entry.entryApi
+                func                : entry.api
+            },
+            {
+                api                 : 'testing',
+                isEncrypted         : false,
+                func                : testing.api
             }
         ];
 

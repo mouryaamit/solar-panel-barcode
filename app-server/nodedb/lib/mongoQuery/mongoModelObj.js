@@ -49,6 +49,7 @@
     var FundsTransferStatusLogModel = require('../models/dbModel').FundsTransferStatusLog;
     var TransferInstructionModel = require('../models/dbModel').TransferInstruction;
     var barcodeModel = require('../models/dbModel').barcode;
+    var testDataModel = require('../models/dbModel').testData;
 
     exports.modelName = {
         BankAdmin                               : 'BankAdmin',
@@ -97,6 +98,7 @@
         FundsTransferStatusLog               : 'FundsTransferStatusLog',
         Captcha                                 : 'Captcha',
         barcode                         : 'barcode',
+        testData                         : 'testData',
         TransferInstruction                     : 'TransferInstruction'
     };
 
@@ -284,6 +286,10 @@
         {
             model               : 'barcode',
             modelObj            : barcodeModel
+        },
+        {
+            model               : 'testData',
+            modelObj            : testDataModel
         }
     ];
 
